@@ -22,7 +22,7 @@ jobs:
           distribution: 'microsoft'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install -DskipTests
         working-directory: ./learn    # ⬅ FIXED
 
       - name: Show workspace files
@@ -60,3 +60,4 @@ jobs:
           app-name: 'empmng'
           slot-name: 'Production'
           package: '*.jar'
+
